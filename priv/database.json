@@ -1,0 +1,21 @@
+{
+  "tokens": [
+    {"id": 1, "token": "qwerty", "user_id": 2}
+  ],
+
+  "users" : [
+    {"id": 1, "name": "Jimmy"},
+    {"id": 2, "name": "Bob"}
+  ],
+
+  "posts" : [
+    {"id": 1, "user_id": 1, "title": "First Post", "text": "Hi there!"},
+    {"id": 2, "user_id": 2, "title": "Bob's post", "text": "Hello, world"},
+    {"id": 3, "user_id": 2, "title": "Bob's second post", "text": "Hi, Bob!"}
+  ],
+
+  "comments": [
+    {"id": 1, "post_id": 2, "text": "Cool!"},
+    {"id": 2, "post_id": 2, "text": "Awesome!"}
+  ]
+}
