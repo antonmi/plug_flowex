@@ -1,5 +1,5 @@
 defmodule PlugFlowexSpec do
-  use ESpec, async: true
+  use ESpec
   use Plug.Test
 
   describe "GET /api/:user_id" do

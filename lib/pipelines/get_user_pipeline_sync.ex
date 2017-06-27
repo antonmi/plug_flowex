@@ -15,6 +15,9 @@ defmodule GetUserPipelineSync do
     data = Map.merge(data, new_data)
 
     new_data = RenderResponse.call(data, %{renderer: UserRenderer})
+    data = Map.merge(data, new_data)
+
+    new_data = SendResponse.call(data, %{})
     Map.merge(data, new_data)
   end
 

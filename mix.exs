@@ -35,7 +35,7 @@ defmodule PlugFlowex.Mixfile do
     [
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.0"},
-      {:flowex, "0.5.0"},
+      {:flowex, path: "/Users/antonmi/elixir/flowex"},
       {:espec, "~> 1.4.0", only: :test},
       {:poison, "~> 3.1.0"}
     ]

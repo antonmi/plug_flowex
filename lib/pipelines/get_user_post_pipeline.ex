@@ -8,6 +8,7 @@ defmodule GetUserPostPipeline do
   pipe FindRecord, opts: %{finder: &__MODULE__.find_post/1, assign_to: :post}
   pipe :prepare_data
   pipe RenderResponse, opts: %{renderer: PostRenderer}
+  pipe SendResponse, count: 10
 
   def prepare_data(%{post: post}, _opts) do
     %{render_data: post}

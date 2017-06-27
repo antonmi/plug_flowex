@@ -9,20 +9,16 @@ defmodule PlugFlowex do
 
   get "api/:user_id" do
     pipeline = Application.get_env(:plug_flowex, :get_user_pipeline)
-    result = GetUserPipeline.call(pipeline, %GetUserPipeline{conn: conn})
-    send_resp(result.conn, result.status, result.content)
+    GetUserPipeline.call(pipeline, %GetUserPipeline{conn: conn}).conn
   end
 
   get "api/:user_id/posts/:post_id" do
     pipeline = Application.get_env(:plug_flowex, :get_user_post_pipeline)
-    result = GetUserPostPipeline.call(pipeline, %GetUserPostPipeline{conn: conn})
-    send_resp(result.conn, result.status, result.content)
+    GetUserPostPipeline.call(pipeline, %GetUserPostPipeline{conn: conn}).conn
   end
 
-
   get "sync_api/:user_id" do
-    result = GetUserPipelineSync.call(%GetUserPipelineSync{conn: conn}, %{})
-    send_resp(result.conn, result.status, result.content)
+    GetUserPipelineSync.call(%GetUserPipelineSync{conn: conn}, %{}).conn
   end
 
   get "/favicon.ico" do
