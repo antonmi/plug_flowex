@@ -1,7 +1,7 @@
 %{"cowboy": {:hex, :cowboy, "1.0.4", "a324a8df9f2316c833a470d918aaf73ae894278b8aa6226ce7a9bf699388f878", [:make, :rebar], [{:cowlib, "~> 1.0.0", [hex: :cowlib, repo: "hexpm", optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, repo: "hexpm", optional: false]}], "hexpm"},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], [], "hexpm"},
   "espec": {:hex, :espec, "1.4.0", "03d71f94035d2f6cd072639ce0fa5f8422a1404755bde4a66c44e6814b544bd4", [:mix], [{:meck, "0.8.4", [hex: :meck, repo: "hexpm", optional: false]}], "hexpm"},
-  "flowex": {:hex, :flowex, "0.5.0", "71e3460ddd166f391ff70782158ab80bbbe2e359ec54651cb76e1c021797dbe5", [:mix], [{:gen_stage, "0.12.0", [hex: :gen_stage, repo: "hexpm", optional: false]}], "hexpm"},
+  "flowex": {:hex, :flowex, "0.5.1", "0a031a999950cb7cefbff00df93bd070a88fd38800bc7fca0490c323211bdbd3", [:mix], [{:gen_stage, "0.12.0", [hex: :gen_stage, repo: "hexpm", optional: false]}], "hexpm"},
   "gen_stage": {:hex, :gen_stage, "0.12.0", "74ec6f84ea0e0e81aa26b745870495094de1c59bfdbd012ae3103208ea124623", [:mix], [], "hexpm"},
   "meck": {:hex, :meck, "0.8.4", "59ca1cd971372aa223138efcf9b29475bde299e1953046a0c727184790ab1520", [:make, :rebar], [], "hexpm"},
   "mime": {:hex, :mime, "1.1.0", "01c1d6f4083d8aa5c7b8c246ade95139620ef8effb009edde934e0ec3b28090a", [:mix], [], "hexpm"},
