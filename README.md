@@ -24,18 +24,23 @@ There is also `GetUserSync` module in pipeline module used for benchmarking
 Pipes are in `lib/pipelines` folder. Names are descriptive.
 
 All the error modules are in `error_pipes.exs` file.
- 
- 
+
+
+## Benchmarks
+
+#### As is
+|          | -t1 -c1 | -t10 -c10 | -t100 -c100|
+|----------|---------|-----------|------------|
+| pipeline |  4.6 K  |   15.2 K  |   14.8 K   |
+| sync     |  12.1 K |   33.8 K  |   38.4 K   |
 
 
 
 
-
-**TODO: Add description**
-
-## Benchmark
 
 wrk -t10 -c10 -d10s http://127.0.0.1:4000/api/2?token=qwerty
+
+
                             pipes (count = 10)     sync
 as_is                    |  15k                 | 37k
 sleep(10)                |  700                 | 800
