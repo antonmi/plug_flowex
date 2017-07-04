@@ -1,6 +1,6 @@
 defmodule HandleErrorPipeline do
   use Flowex.Pipeline
-  defstruct [:conn, :error, :status, :content]
+  defstruct [:conn, :error]
 
   pipe Handle401
   pipe Handle404

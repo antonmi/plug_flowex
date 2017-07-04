@@ -1,6 +1,6 @@
 {
   "tokens": [
-    {"id": 1, "token": "qwerty", "user_id": 2}
+    {"id": 1, "token": "qwerty", "client_id": 2}
   ],
 
   "users" : [

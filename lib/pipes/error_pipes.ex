@@ -17,7 +17,7 @@ defmodule Handle401 do
 
   def call(data, _opts) do
     case data.error do
-      %AuthUser.Error{message: message} -> %{status: @status, content: message}
+      %AuthClient.Error{message: message} -> %{status: @status, content: message}
       _ -> data
     end
   end

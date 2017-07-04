@@ -1,11 +1,11 @@
-defmodule GetUserPipelineSync do
+defmodule GetUserSync do
   defstruct [:conn, :user, :status, :content]
 
   def call(data, _opts) do
     new_data = FetchParams.call(data, %{auth_data: ["token"], repo_data: ["user_id"]})
     data = Map.merge(data, new_data)
 
-    new_data = AuthUser.call(data, %{})
+    new_data = AuthClient.call(data, %{})
     data = Map.merge(data, new_data)
 
     new_data = FindRecord.call(data, %{finder: &__MODULE__.find_user/1, assign_to: :user})

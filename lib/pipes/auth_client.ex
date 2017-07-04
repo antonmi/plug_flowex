@@ -1,4 +1,4 @@
-defmodule AuthUser do
+defmodule AuthClient do
   defstruct [:auth_data]
 
   defmodule Error do

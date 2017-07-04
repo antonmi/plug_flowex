@@ -1,5 +1,36 @@
 # PlugFlowex
 
+### Demo application demonstrating a Flowex Railway-FBP design approach
+This is a REST API based on [Elixir Plug](https://github.com/elixir-lang/plug) library
+
+
+## Endpoints
+There are 2 endpoints:
+
+'GET /api/:user_id'
+
+'GET /api/:user_id/posts/:post_id'
+
+There is also 'GET sync_api/:user_id' endpoint used for benchmarking
+
+## Pipelines
+Pipelines are in `lib/pipelines` folder
+- GetUserPipeline - gets user
+- GetUserPostPipeline - gets user post
+- HandleErrorPipeline - handles errors
+There is also `GetUserSync` module in pipeline module used for benchmarking
+
+## Pipes
+Pipes are in `lib/pipelines` folder. Names are descriptive.
+
+All the error modules are in `error_pipes.exs` file.
+ 
+ 
+
+
+
+
+
 **TODO: Add description**
 
 ## Benchmark
