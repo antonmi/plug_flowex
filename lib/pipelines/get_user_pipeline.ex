@@ -2,14 +2,14 @@ defmodule GetUserPipeline do
   use Flowex.Pipeline
   defstruct [:conn, :user]
 
-  pipe FetchParams,
+  pipe FetchParams, count: 10,
        opts: %{auth_data: ["token"], repo_data: ["user_id"]}
-  pipe AuthClient
-  pipe FindRecord,
+  pipe AuthClient, count: 10
+  pipe FindRecord, count: 10,
        opts: %{finder: &__MODULE__.find_user/1, assign_to: :user}
-  pipe :prepare_data
-  pipe RenderResponse, opts: %{renderer: UserRenderer}
-  pipe SendResponse
+  pipe :prepare_data, count: 10
+  pipe RenderResponse, opts: %{renderer: UserRenderer}, count: 10
+  pipe SendResponse,  count: 10
   error_pipe :handle_error
 
   def prepare_data(%{user: user}, _opts), do: %{render_data: user}
